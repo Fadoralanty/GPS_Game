@@ -190,9 +190,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &116995095
 GameObject:
@@ -261,9 +263,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &143111130
 GameObject:
@@ -332,9 +336,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &166231670
 GameObject:
@@ -434,9 +440,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &330585543
 GameObject:
@@ -760,9 +768,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &647741248
 GameObject:
@@ -831,9 +841,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1001 &751499610
 PrefabInstance:
@@ -958,9 +970,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!4 &830391449
 Transform:
@@ -1093,9 +1107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &902290372
 GameObject:
@@ -1149,9 +1165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!4 &902290375
 Transform:
@@ -1198,6 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Nodes:
+  - {fileID: 1279364888}
   - {fileID: 647741251}
   - {fileID: 1566092458}
   - {fileID: 986941571}
@@ -1220,7 +1239,11 @@ MonoBehaviour:
   SplineContainer: {fileID: 1990624560}
   linePrefab: {fileID: 4575229352978091342, guid: 097f6f96a98bf074cbe4498e137e93de,
     type: 3}
+  playerLinePrefab: {fileID: 4575229352978091342, guid: 826bc9085a075554c8b77ba3eafee9cb,
+    type: 3}
   linesParentTransform: {fileID: 166231671}
+  cornerTolerance: 0.3
+  minimumDistanceToDraw: 5
 --- !u!4 &975892536
 Transform:
   m_ObjectHideFlags: 0
@@ -1324,9 +1347,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &1044251060
 GameObject:
@@ -1395,9 +1420,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &1091057166 stripped
 GameObject:
@@ -1495,9 +1522,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &1279364885
 GameObject:
@@ -1567,9 +1596,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!54 &1279364889
 Rigidbody:
@@ -1694,9 +1725,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &1566092455
 GameObject:
@@ -1765,9 +1798,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &1975867969
 GameObject:
@@ -1836,9 +1871,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &1983878219
 GameObject:
@@ -1907,9 +1944,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &1988575698
 GameObject:
@@ -2141,9 +2180,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!4 &2044619267
 Transform:
@@ -2227,9 +2268,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1 &2111181793
 GameObject:
@@ -2298,9 +2341,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Links: []
+  neighbours: []
   NodeLayer:
     serializedVersion: 2
     m_Bits: 8
+  position: {x: 0, y: 0}
   detectionRadius: 10.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -2310,6 +2355,6 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 751499610}
-  - {fileID: 1988575702}
   - {fileID: 975892536}
+  - {fileID: 1988575702}
   - {fileID: 166231671}
