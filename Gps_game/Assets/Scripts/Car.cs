@@ -6,25 +6,38 @@ using UnityEngine.Splines;
 
 public class Car : MonoBehaviour
 {
+    public bool isWarned;
     public Action<Node> OnReachingDestination;
-    private SplineAnimate _splineAnimate;
+    public SplineAnimate splineAnimate;
+    [SerializeField] private float warningDuration = 5f;
     private bool _hasReachedDestination;
     private Node _destinationNode;
     private void Awake()
     {
-        _splineAnimate = GetComponent<SplineAnimate>();
+        splineAnimate = GetComponent<SplineAnimate>();
     }
 
     public void GoToMarkedDestination(Node node)
     {
         _destinationNode = node;
-        _splineAnimate.Play();
+        splineAnimate.Play();
     }
 
+    public void WarnDriver()
+    {
+        StartCoroutine(WarnDriverRoutine());
+    }
+
+    private IEnumerator WarnDriverRoutine()
+    {
+        isWarned = true;
+        yield return new WaitForSeconds(warningDuration);
+        isWarned = false;
+    }
     private void FixedUpdate()
     {
         if (_hasReachedDestination) { return; }
-        if (_splineAnimate.ElapsedTime >= _splineAnimate.Duration)
+        if (splineAnimate.ElapsedTime >= splineAnimate.Duration)
         {
             _hasReachedDestination = true;
             OnReachingDestination?.Invoke(_destinationNode);

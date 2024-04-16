@@ -25,7 +25,7 @@ public class MapGraph : MonoBehaviour
     private Node _currentNode;
     private bool _isDrawingPlayerLine;
     private Camera _mainCamera;
-
+    private bool _hasCarStartedMoving;
     private void Awake()
     {
         _mapLinesSet = new HashSet<(Node, Node)>();
@@ -62,6 +62,9 @@ public class MapGraph : MonoBehaviour
             BezierKnot newBezierKnot = new BezierKnot(position);
             SplineContainer.Spline.Add(newBezierKnot);
         }
+
+        _hasCarStartedMoving = true;
+        car.splineAnimate.Duration = _playerLine.Count;
         car.GoToMarkedDestination(_currentNode);
     }
 
@@ -69,7 +72,7 @@ public class MapGraph : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            _isDrawingPlayerLine = true;
+            _isDrawingPlayerLine = !_isDrawingPlayerLine;
         }
 
         if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
@@ -81,6 +84,7 @@ public class MapGraph : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (_hasCarStartedMoving) {return; }
         if (!_isDrawingPlayerLine) { return; }
         //Get Mouse position
         Ray ray = _mainCamera.ScreenPointToRay(Input.mousePosition);

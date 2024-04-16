@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Node levelObjectiveNode;
     [SerializeField] private Car car;
     [SerializeField] private UI UI;
+    private bool _isGameOver;
     private void Awake()
     {
         if (Singleton == null)
@@ -24,10 +26,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         car.OnReachingDestination += OnReachingDestination;
+        _isGameOver = false;
     }
 
     private void OnReachingDestination(Node node)
     {
+        if (_isGameOver) {return; }
         if (node == levelObjectiveNode)
         {
             LevelCompleted();
@@ -38,9 +42,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void LevelFailed()
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
+    public void LevelFailed()
     {
         UI.ShowGameOverScreen();
+        _isGameOver = true;
     }
     private void LevelCompleted()
     {

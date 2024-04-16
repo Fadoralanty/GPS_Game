@@ -439,6 +439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78be9016a86c086428e19ef1568d0aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWarned: 0
+  warningDuration: 5
 --- !u!95 &9560830
 Animator:
   serializedVersion: 5
@@ -476,7 +478,7 @@ MonoBehaviour:
   m_PlayOnAwake: 0
   m_LoopMode: 0
   m_Method: 0
-  m_Duration: 15
+  m_Duration: 10
   m_MaxSpeed: 0
   m_EasingMode: 0
   m_AlignmentMode: 1

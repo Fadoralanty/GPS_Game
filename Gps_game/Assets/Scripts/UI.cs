@@ -27,4 +27,9 @@ public class UI : MonoBehaviour
     {
         OnStartTravel.Invoke();
     }
+
+    public void OpenSurveyURL()
+    {
+        Application.OpenURL("https://forms.gle/kAAJWqewEmCgHKKa9");
+    }
 }
