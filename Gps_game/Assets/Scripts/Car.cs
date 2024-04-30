@@ -34,7 +34,8 @@ public class Car : MonoBehaviour
         yield return new WaitForSeconds(warningDuration);
         isWarned = false;
     }
-    private void FixedUpdate()
+
+    private void Update()
     {
         if (_hasReachedDestination) { return; }
         if (splineAnimate.ElapsedTime >= splineAnimate.Duration)
@@ -42,6 +43,6 @@ public class Car : MonoBehaviour
             _hasReachedDestination = true;
             OnReachingDestination?.Invoke(_destinationNode);
         }
-
     }
+    
 }
